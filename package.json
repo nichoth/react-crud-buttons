@@ -1,0 +1,34 @@
+{
+  "name": "react-crud-buttons",
+  "description": "UI stuff",
+  "main": "index.js",
+  "version": "0.0.0",
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify -d example/example.js > example/bundle.js",
+    "watch": "watchify example/example.js -o example/bundle.js -dv",
+    "dev": "parallelshell \"npm run watch\" parallelshell \"npm run server\"",
+    "server": "node server.js",
+    "demo": "browserify example/example.js > example/bundle.js && html-inline example/index.html | curl -sT- https://htmlb.in"
+  },
+  "author": "Nick Thomas <nichoth@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nichoth/react-crud-buttons.git"
+  },
+  "license": "ISC",
+  "peerDependencies": {},
+  "devDependencies": {
+    "ecstatic": "^0.8.0",
+    "material-ui": "^0.8.0",
+    "parallelshell": "^1.1.1",
+    "react": "^0.13.3",
+    "react-tap-event-plugin": "^0.1.7",
+    "reactify": "^1.1.1"
+  }
+}
