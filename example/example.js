@@ -1,4 +1,8 @@
 var React = require('react');
-var SaveB = require('../lib/SaveButton.jsx');
+var EditB = require('../lib/EditButton.jsx');
 
-React.render(<SaveB />, document.body);
+function handle() {
+  console.log('bla');
+}
+
+React.render(<EditB onClick={handle} />, document.body);

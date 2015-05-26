@@ -1,5 +1,5 @@
 var React = require('react');
-var SvgIcon = require('./SvgIcon.jsx');
+var SvgButton = require('./SvgButton.jsx');
 
 var CreateButton = React.createClass({
   propTypes: {
@@ -13,9 +13,9 @@ var CreateButton = React.createClass({
 
   render: function() {
     return (
-        <SvgIcon>
-          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
-        </SvgIcon>
+      <SvgButton {...this.props}>
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+      </SvgButton>
     );
   }
 });
