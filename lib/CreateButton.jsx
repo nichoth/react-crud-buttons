@@ -1,7 +1,5 @@
 var React = require('react');
-var mui = require('material-ui');
-var IconButton = mui.IconButton;
-var SvgIcon = mui.SvgIcon;
+var SvgIcon = require('./SvgIcon.jsx');
 
 var CreateButton = React.createClass({
   propTypes: {
@@ -15,11 +13,9 @@ var CreateButton = React.createClass({
 
   render: function() {
     return (
-      <IconButton onClick={this._handleClick} tooltip="Create" touch={true}>
         <SvgIcon>
           <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
         </SvgIcon>
-      </IconButton>
     );
   }
 });
